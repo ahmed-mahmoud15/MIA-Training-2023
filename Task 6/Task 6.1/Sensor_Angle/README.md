@@ -51,3 +51,9 @@ This code demonstrates the fusion of gyroscope and accelerometer data from `MPU-
 1. Connect the Arduino board to your computer.
 2. Open the Arduino IDE and upload the code to the Arduino board.
 3. Open the serial monitor to view the yaw angle readings.
+
+
+# Question 
+
+  The filter should be used in case of the inviroment is noisy is Low Pass Filter and its maximum frequency value is 400kHz ("page 5 in the datasheet")
+  and the cutoff frequency is 400 / (2 * pi) = 282.8 KHz
