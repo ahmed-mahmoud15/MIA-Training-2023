@@ -38,6 +38,14 @@ This code demonstrates the fusion of gyroscope and accelerometer data from `MPU-
 - `setup()`: Initializes the Wire library, starts serial communication, and configures the IMU sensor.
 - `loop()`: Reads gyroscope and accelerometer data, performs sensor fusion, and prints the yaw angle.
 
+## Process
+ - Initialize the `MPU6050` sensor and configure it to provide raw accelerometer and gyroscope data using `I2C` communication.
+ - Read the gyroscope data from the sensor. The gyroscope data will provide The (X, Y, Z) gyroscope's readings then divide it by the gyro sensitivity,         measured in degrees         per second (°/s).
+ - Read the raw accelerometer data from the sensor. The accelerometer data will provide the orientation of the sensor with respect to gravity in three         axes: X, Y, and Z. It also divided by accelration's sensitivity.
+ - Apply sensor fusion to combine the yaw rate from the gyroscope and the pitch and roll angles from the accelerometer.
+ - Integrate the yaw rate over time to obtain the yaw angle.
+ - Update the yaw angle continuously.
+
 ## Usage
 
 1. Connect the Arduino board to your computer.
